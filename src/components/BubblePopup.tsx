@@ -34,18 +34,14 @@ const BubblePopup: React.FC<BubblePopupProps> = ({ node, onClose }) => {
             {/* Profile Image instead of Number Badge */}
              <div className="w-16 h-16 rounded-full border-2 border-white shadow-lg overflow-hidden ring-2 ring-slate-100 shrink-0">
                  <img 
-                   src="/profile/profile.jpeg"
-                   onError={(e) => {
-                     e.currentTarget.src = "https://picsum.photos/300/300?grayscale";
-                     e.currentTarget.onerror = null;
-                   }}
+                   src="/profile/profile.jpeg" 
                    alt="Profile" 
                    className="w-full h-full object-cover"
                  />
              </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Detail View</span>
-              <h2 className={`text-2xl font-bold leading-tight ${node.textColorClass}`}>{node.title}</h2>
+              <h2 className="text-2xl font-bold text-slate-800 leading-tight">{node.title}</h2>
             </div>
           </div>
           

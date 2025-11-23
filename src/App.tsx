@@ -68,11 +68,7 @@ const App: React.FC = () => {
             <div className="relative z-20">
                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-white shadow-2xl overflow-hidden relative z-20 ring-4 ring-[#0078D4]/10">
                  <img 
-                   src="/profile/profile.jpeg"
-                   onError={(e) => {
-                     e.currentTarget.src = "https://picsum.photos/300/300?grayscale";
-                     e.currentTarget.onerror = null;
-                   }}
+                   src="profile/profile.jpeg" 
                    alt="Profile" 
                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                  />
@@ -190,7 +186,7 @@ const App: React.FC = () => {
                        <div className={`w-8 h-8 rounded-full ${node.colorClass} flex items-center justify-center text-white font-bold text-sm`}>
                           {node.id}
                        </div>
-                       <h3 className={`font-bold uppercase text-sm ${node.textColorClass}`}>{node.title}</h3>
+                       <h3 className="font-bold text-[#0078D4] uppercase text-sm">{node.title}</h3>
                     </div>
                     <p className="text-slate-600 text-sm pl-11">{node.content.replace(/\*\*/g, '')}</p>
                  </div>
