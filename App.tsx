@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PORTFOLIO_NODES } from './constants';
 import HexagonBadge from './components/HexagonBadge';
 import ContentCard from './components/ContentCard';
 import ChatWidget from './components/ChatWidget';
 import BubblePopup from './components/BubblePopup';
+import ProfileAvatar from './components/ProfileAvatar';
 
-const App: React.FC = () => {
-  const [activeNodeId, setActiveNodeId] = useState<number | null>(null);
+const App = () => {
+  const [activeNodeId, setActiveNodeId] = useState(null as number | null);
 
   // Filter nodes based on left or right position
   const leftNodes = [
@@ -34,18 +35,18 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-slate-800 overflow-x-hidden pb-20 font-sans">
       {/* Header Section */}
-      <header className="max-w-7xl mx-auto pt-12 pb-8 px-4 text-center">
+      <header className="max-w-7xl mx-auto pt-12 pb-2 px-4 text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0078D4] tracking-tight mb-2">
           Architecting the Future: 23 Years of Technology Leadership
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-[#0078D4] to-[#2CB1BC] mx-auto mt-4 rounded-full"></div>
-        <p className="mt-4 text-slate-500 text-sm md:text-base animate-pulse">
+        <p className="mt-4 text-[#0078D4] font-medium text-sm md:text-base animate-pulse">
           Click on the numbered hexagons below to explore details
         </p>
       </header>
 
       {/* Main Content Area */}
-      <main className="max-w-7xl mx-auto relative px-4 py-8">
+      <main className="max-w-7xl mx-auto relative px-4 pt-2 pb-12">
         
         {/* Grid Layout: Left Content | Center Visual | Right Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -67,15 +68,7 @@ const App: React.FC = () => {
             {/* Central Profile Image */}
             <div className="relative z-20">
                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-white shadow-2xl overflow-hidden relative z-20 ring-4 ring-[#0078D4]/10">
-                 <img 
-                   src="/profile/profile.jpeg"
-                   onError={(e) => {
-                     e.currentTarget.src = "https://picsum.photos/300/300?grayscale";
-                     e.currentTarget.onerror = null;
-                   }}
-                   alt="Profile" 
-                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                 />
+                 <ProfileAvatar className="w-full h-full hover:scale-110 transition-transform duration-500" />
                </div>
                {/* Inner glow behind image */}
                <div className="absolute inset-0 rounded-full bg-blue-400 blur-3xl opacity-20 -z-10"></div>

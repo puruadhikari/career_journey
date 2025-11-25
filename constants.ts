@@ -34,8 +34,8 @@ export const PORTFOLIO_NODES: PortfolioNode[] = [
   },
   {
     id: 4,
-    title: "Role maturity",
-    content: "Progressed through a structured and impactful career journey from **Software Engineer** building enterprise applications, to **Solution Architect** designing scalable platforms, to **Enterprise Architect** shaping technology strategy and governance, and ultimately to **Staff Engineer** leading AI innovation and enterprise transformation initiatives.",
+    title: "Strategic Technical Leadership",
+    content: "Provide strategic technical leadership across **engineering, architecture**, and AI, partnering with senior leaders to shape AI strategy, prioritise investments, and align technology roadmaps with business outcomes. Define delivery principles, mentor senior engineers, and drive large-scale platform and **AI transformation initiatives** across the organisation.",
     details: "My career path demonstrates a consistent upward trajectory in responsibility and impact. Starting as a Software Engineer, I mastered the craft of coding and system design. As a Solution Architect, I learned to design systems that scale and withstand failure. Transitioning to Enterprise Architect, I focused on organizational strategy, governance, and portfolio management. Now, as a Staff Engineer, I operate at the intersection of leadership and deep technical work, mentoring senior engineers and setting the technical vision for critical AI and transformation initiatives.",
     position: 'right',
     colorClass: 'bg-[#1f2937]', // Dark Navy

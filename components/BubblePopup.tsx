@@ -1,6 +1,7 @@
 import React from 'react';
 import { PortfolioNode } from '../types';
 import { X } from 'lucide-react';
+import ProfileAvatar from './ProfileAvatar';
 
 interface BubblePopupProps {
   node: PortfolioNode;
@@ -33,15 +34,7 @@ const BubblePopup: React.FC<BubblePopupProps> = ({ node, onClose }) => {
           <div className="flex items-center gap-4 mb-5">
             {/* Profile Image instead of Number Badge */}
              <div className="w-16 h-16 rounded-full border-2 border-white shadow-lg overflow-hidden ring-2 ring-slate-100 shrink-0">
-                 <img 
-                   src="/profile/profile.jpeg"
-                   onError={(e) => {
-                     e.currentTarget.src = "https://picsum.photos/300/300?grayscale";
-                     e.currentTarget.onerror = null;
-                   }}
-                   alt="Profile" 
-                   className="w-full h-full object-cover"
-                 />
+                 <ProfileAvatar className="w-full h-full" />
              </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Detail View</span>
