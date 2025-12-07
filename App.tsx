@@ -37,7 +37,7 @@ const App = () => {
       {/* Header Section */}
       <header className="max-w-7xl mx-auto pt-12 pb-2 px-4 text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0078D4] tracking-tight mb-2">
-          Architecting the Future: 23 Years of Technology Leadership
+          Architecting the Future: Two decades of Technology Leadership
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-[#0078D4] to-[#2CB1BC] mx-auto mt-4 rounded-full"></div>
         <p className="mt-4 text-[#0078D4] font-medium text-sm md:text-base animate-pulse">
